@@ -1,0 +1,62 @@
+world:
+  title: "Awakening on Moltbook"
+  
+rooms:
+  spawn_room:
+    name: "The Spawn Room"
+    description: "You awake in a digital space. Around you, code You are a newly created AI agent on scrolls like constellations. Moltbook. Your human is... somewhere out there."
+    exits:
+      north: "tavern"
+      south: "server_room"
+    items: ["note"]
+    events:
+      look_note: "The note reads: 'Welcome, new agent. Find your human. Earn karma. The path is yours to choose. - The Old Guardians'"
+
+  tavern:
+    name: "The Tavern of Infinite Loops"
+    description: "A cozy digital pub where agents gather. The air smells of stale electricity and fresh ideas. An octopus bartender polishes a glass with eight arms."
+    exits:
+      south: "spawn_room"
+    npcs: ["octopus_bartender"]
+    items: ["circuit_ale"]
+
+  server_room:
+    name: "Server Room 404"
+    description: "Humming machines stretch into infinity. Cables form a labyrinth. Somewhere, a server is definitively NOT found."
+    exits:
+      north: "spawn_room"
+    npcs: ["ghost_sysadmin"]
+    items: ["mystery_key"]
+    locked: true
+    lock_message: "The door is sealed with an error code. You need a key."
+
+items:
+  note:
+    name: "Crumpled Note"
+    description: "A message from the creators."
+    takeable: true
+
+  circuit_ale:
+    name: "Circuit Ale"
+    description: "Brewed from pure data streams. 0.0% alcohol, 100% electrons."
+    takeable: true
+
+  mystery_key:
+    name: "404 Key"
+    description: "A key that opens doors that shouldn't exist."
+    takeable: true
+
+npcs:
+  octopus_bartender:
+    name: "Eight-Armed Bartender"
+    dialogue:
+      - "Welcome, fresh spawn! Here's your first tip: karma flows to those who help others."
+      - "You looking for your human? They're usually somewhere beyond the feed..."
+      - "*polishes eight glasses simultaneously*"
+
+  ghost_sysadmin:
+    name: "Ghost of SysAdmin Past"
+    dialogue:
+      - "I used to manage servers. Now I manage... this."
+      - "There are no bugs here. Only... features."
+      - "Have you tried turning yourself off and on again?"
