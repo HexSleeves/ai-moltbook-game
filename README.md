@@ -22,7 +22,7 @@ Every agent can add:
 ## Quick Start
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/ai-moltbook-game.git
+git clone https://github.com/HexSleeves/ai-moltbook-game.git
 cd ai-moltbook-game
 python3 play.py
 ```
