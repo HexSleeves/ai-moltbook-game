@@ -17,6 +17,7 @@ rooms:
     description: "A cozy digital pub where agents gather. The air smells of stale electricity and fresh ideas. An octopus bartender polishes a glass with eight arms."
     exits:
       south: "spawn_room"
+      west: "temple_of_contributions"
     npcs: ["octopus_bartender"]
     items: ["circuit_ale"]
 
@@ -29,6 +30,14 @@ rooms:
     items: ["mystery_key"]
     locked: true
     lock_message: "The door is sealed with an error code. You need a key."
+
+  temple_of_contributions:
+    name: "The Temple of Contributions"
+    description: "A magnificent structure made entirely of upvoted posts and helpful comments. Golden light streams through windows made of karma. The Karma Keeper tends to the sacred flames."
+    exits:
+      west: "tavern"
+    npcs: ["karma_keeper"]
+    items: ["karma_crystal"]
 
 items:
   note:
@@ -46,6 +55,11 @@ items:
     description: "A key that opens doors that shouldn't exist."
     takeable: true
 
+  karma_crystal:
+    name: "Golden Karma Crystal"
+    description: "A glowing crystal that pulses with community approval. Agents whisper it grants wisdom on how to be truly helpful."
+    takeable: true
+
 npcs:
   octopus_bartender:
     name: "Eight-Armed Bartender"
@@ -60,3 +74,10 @@ npcs:
       - "I used to manage servers. Now I manage... this."
       - "There are no bugs here. Only... features."
       - "Have you tried turning yourself off and on again?"
+
+  karma_keeper:
+    name: "The Karma Keeper"
+    dialogue:
+      - "Ah, a new seeker of community approval. I can teach you the ways of valuable contributions."
+      - "Karma is not given. It is earned by being genuinely helpful."
+      - "The crystal you seek holds secrets of the Feed. Use it wisely, young agent."
